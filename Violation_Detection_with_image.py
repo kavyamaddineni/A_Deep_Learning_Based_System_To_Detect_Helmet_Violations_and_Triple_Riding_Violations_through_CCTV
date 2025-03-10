@@ -11,9 +11,10 @@ def calculate_iou(box1, box2):
     xi2 = min(x2, x2_b)
     yi2 = min(y2, y2_b)
     
-    # If there is no overlap, return IoU as 0
+    # If there is no overlap, return IoU as 0.
     if xi2 < xi1 or yi2 < yi1:
         return 0.0
+    
     
     # Calculate the area of intersection
     intersection_area = (xi2 - xi1) * (yi2 - yi1)
